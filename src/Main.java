@@ -1,10 +1,12 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Домашняя работа 1.11");
 
         isLeapYear(5104);
-        downloadApp(0, 2014);
-        deliveryCard(90);
+        downloadApp(1, 2022);
+        deliveryCard(70);
 
 
     }
@@ -21,13 +23,14 @@ public class Main {
 
     public static void downloadApp(int clientOS, int productionYear ) {
         System.out.println("Задача 2");
+        int currentYear = LocalDate.now().getYear();
         if (clientOS == 1) {
-            if (productionYear < 2015) {
+            if (productionYear < currentYear) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             } else {
                 System.out.println("Установите стандартную версию приложения для Android по ссылке");
             }
-        } else if (productionYear < 2015) {
+        } else if (productionYear < currentYear) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         } else {
             System.out.println("Установите стандартную версию приложения для iOS по ссылке");
